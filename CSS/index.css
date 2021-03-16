@@ -29,8 +29,11 @@ html, body {font-family: 'LGSmHaR'; font-size: 14px; letter-spacing: -1px;}
     .navi-wrapper .navi-wrap {float: right; color: #f8f8f8; font-size: 18px;}
     .navi-wrapper .navi-wrap .navi {float: left; padding: 16px 14px 30px 14px;}
     .navi-wrapper .navi-wrap .navi:nth-child(12) > span {opacity: .5;}             /* nth-child를 last-child로 써도 가능 */
+    .navi-wrapper .navi-wrap a:hover {color: #999;}
 
 	.header-wrapper .navi-wrapper2 {background-color: #ae1a4a;}
     .navi-wrapper2 .navi-wrap2 {float: right; color: #f8f8f8; font-size: 16px;}
       .navi-wrapper2 .navi-wrap2 .navi2 {float: left; padding: 10px 10px 10px 10px;}
       .navi-wrapper2 .navi-wrap2 .navi3 {float: left; padding: 11px 4px 11px 4px; font-size: 13px;}
+
+  .main-wrapper .main-wrap {width: 100%; max-width: 1924px; max-height: 727px;}
