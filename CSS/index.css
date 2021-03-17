@@ -4,11 +4,19 @@
 1. background-color: #333;
 2. background-image: url('../img/common.png');
 3. background-repeat: no-repeat;
-4. background-position: 0(좌우, left, right, center) 0(상하);
-5. background-size: [contain] 100% [auto], auto 100%, cover, 100px 100px
------이걸 한줄로 쓰기 ↓-----
-background: 1 2 3 4 (순서대로 써야함)
+4. background-position: top;
+4. background-position: left;
+4. background-position: center;
+4. background-position: left center;
+4. background-position: 25% 75%; (좌, 상)
+4. background-position: left 25% top 75%;
+5. background-size: [contain], 100% [auto], auto 100%, cover, 100px 100px
+---- 한줄로 ---
+background: 1 2 3 4
 background: #333 url('../img/common.png') no-repeat 0 0;
+background: url('../img/common.png') no-repeat 0 0;
+background: url('../img/common.png');
+background: #333 url('../img/common.png') left top/cover;
 */
 
 @import './lge-font.css';
@@ -19,21 +27,22 @@ html, body {font-family: 'LGSmHaR'; font-size: 14px; letter-spacing: -1px;}
 /********************* header-wrapper **********************/
 .header-wrapper {}
 	.header-wrapper .top-wrapper {background-color: #333; padding: 20px 0 6px 0;}
-    .top-wrapper .top-wrap {float: right; padding: 6px 16px; background-color: #ae1a4a; border-radius: 13px;}
-      .top-wrapper .top-wrap li {float: left; color: #f8f8f8;}
-      .top-wrapper .top-wrap li:nth-child(2) {margin: 0 12px; opacity: .5;}        /* 중요한 지명방법!! */
+		.top-wrapper ul.top-wrap {float: right; padding: 6px 16px; background-color: #ae1a4a; border-radius: 13px;}
+			.top-wrapper ul.top-wrap li {float: left; color: #f8f8f8;}
+			.top-wrapper ul.top-wrap li:nth-child(2) {margin: 0 12px; opacity: .5;}
 
-	.header-wrapper .navi-wrapper {background-color: #333;}
-    .navi-wrapper .logo {width: 164px; height: 43px; float: left; background: url(../IMG/common.png);}
-      .navi-wrapper .logo a {display: inline-block; width: 100%; height: 100%;}
-    .navi-wrapper .navi-wrap {float: right; color: #f8f8f8; font-size: 18px;}
-    .navi-wrapper .navi-wrap .navi {float: left; padding: 16px 14px 30px 14px;}
-    .navi-wrapper .navi-wrap .navi:nth-child(12) > span {opacity: .5;}             /* nth-child를 last-child로 써도 가능 */
-    .navi-wrapper .navi-wrap a:hover {color: #999;}
+	.header-wrapper .navi-wrapper {background-color: #333; position: relative;}
+		.navi-wrapper .logo {width: 164px; height: 43px; float: left; background: url('../img/common.png');}
+			.navi-wrapper .logo a {display: inline-block; width: 100%; height: 100%;}
+		.navi-wrapper .navi-wrap {float: right; color: #f8f8f8; font-size: 18px;}
+		.navi-wrapper .navi-wrap .navi {float: left; padding: 16px 14px 30px 14px; height: 66px;}
+
+      .navi-wrapper .navi .sub-wrap {position: absolute; top: 66px; left: 0; height: 0; width: 100%; background-image: linear-gradient(#ccc, #f1f1f1); background-image: 
+      linear-gradient(#ccc, #f1f1f1); transition: all 0.35s; overflow: hidden;}
+		.navi-wrapper .navi:hover {color: #333; background-color: #ccc;}
+		.navi-wrapper .navi:hover > .sub-wrap {height: 300px;}
+    
+
+    .navi-wrapper .navi-wrap .navi:last-child > span {opacity: .5;}
 
 	.header-wrapper .navi-wrapper2 {background-color: #ae1a4a;}
-    .navi-wrapper2 .navi-wrap2 {float: right; color: #f8f8f8; font-size: 16px;}
-      .navi-wrapper2 .navi-wrap2 .navi2 {float: left; padding: 10px 10px 10px 10px;}
-      .navi-wrapper2 .navi-wrap2 .navi3 {float: left; padding: 11px 4px 11px 4px; font-size: 13px;}
-
-  .main-wrapper .main-wrap {width: 100%; max-width: 1924px; max-height: 727px;}
