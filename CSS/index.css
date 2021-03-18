@@ -22,38 +22,99 @@ background: #333 url('../img/common.png') left top/cover;
 @import './lge-font.css';
 
 html, body {font-family: 'LGSmHaR'; font-size: 14px; letter-spacing: -1px; height: 10000px;}
-.wrapper {max-width: 1600px; margin: auto; padding: 0 30px;}
-.wrapper2 {max-width: 1300px; margin: auto; padding: 0 30px;}
+.wrapper {max-width: 1600px; margin: auto; padding: 0 2rem;}
+.wrapper2 {max-width: 1300px; margin: auto; padding: 0 2rem;}
 
 /********************* header-wrapper **********************/
 .header-wrapper {}
-	.top-wrapper {background-color: #333; padding: 20px 0 6px 0;}
-		.top-wrapper ul.top-wrap {float: right; padding: 6px 16px; background-color: #ae1a4a; border-radius: 13px;}
+	.top-wrapper {background-color: #333; padding: 1.5em 0 .625em 0;}
+		.top-wrapper ul.top-wrap {float: right; padding: .5em .875em; background-color: #ae1a4a; border-radius: 1.25em;}
 			.top-wrapper ul.top-wrap li {float: left; color: #f8f8f8;}
-			.top-wrapper ul.top-wrap li:nth-child(2) {margin: 0 12px; opacity: .5;}
-
+			.top-wrapper ul.top-wrap li:nth-child(2) {margin: 0 .875em; opacity: .5;}
 	.header-wrapper .navi-wrapper {background-color: #333; position: relative; z-index: 3;}
 		.navi-wrapper .logo {width: 164px; height: 43px; float: left; background: url('../img/common.png');}
 			.navi-wrapper .logo a {display: inline-block; width: 100%; height: 100%;}
-		.navi-wrapper .navi-wrap {float: right; color: #f8f8f8; font-size: 18px;}
-		.navi-wrapper .navi {float: left; padding: 16px 14px 30px 14px; height: 66px;}
+		.navi-wrapper .navi-wrap {float: right; color: #f8f8f8; font-size: 1.25rem; display: none;}
+    .navi-wrapper .mb-navi-wrap {float: right; color: #f8f8f8; font-size: 1.75rem; padding: .5em 0 .75em 0; cursor: pointer;}
+
+		.navi-wrapper .navi {float: left; padding: .875em .75em 1.75em .75em; height: 63px;}
 		.navi-wrapper .navi:hover {background-color: #ccc;}
 		.navi-wrapper .navi:hover > a {color: #333;}
 		.navi-wrapper .navi:hover > .sub-wrapper {z-index: 2; height: 300px;}
     .navi-wrapper .navi:last-child > span {opacity: .5;}
 
-    .sub-wrapper {position: absolute; top: 66px; left: 0; height: 0; width: 100%; background-image: linear-gradient(#ccc, #f1f1f1); transition:
+    .sub-wrapper {position: absolute; top: 63px; left: 0; height: 0; width: 100%; background-image: linear-gradient(#ccc, #f1f1f1); transition:
     height 0.35s; overflow: hidden; z-index: 1; box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);}
-      .sub-wrapper .sub-wrap {float: left; width: 25%;}
-      .sub-wrapper .sub-wrap .title {}
-      .sub-wrapper .sub-wrap .title > div {}
-      .sub-wrapper .sub-wrap .title > h2 {}
-      .sub-wrapper .sub-navi {}
-      .sub-wrapper .sub-prd {}
-      .sub-wrapper .sub-prd > ul {}
-      .sub-wrapper .sub-prd > ul > .prd {}
+    .sub-wrapper > .wrapper2 {height: 100%; padding: 1.5% 0;}
+      .sub-wrapper .sub-wrap {float: left; width: 25%; height: 100%; padding: 0 1.25%; color: #333;}
+      .sub-wrapper .sub-wrap:not(:last-child) {border-right: 1px solid #bbb;}
+      .sub-wrapper .sub-wrap.title {text-align: center;}
+      .sub-wrapper .sub-wrap.title > div {padding: 5% 10% 10% 10%;}
+      .sub-wrapper .sub-wrap.title > h2 {font-size: 0.875em; line-height: 1.5;}
+      .sub-wrapper .sub-wrap.title > h2 span {font-size: 1.25em; color: #ae1a4a;}
+      .sub-wrapper .sub-wrap.title:hover a {text-decoration: underline;}
+      .sub-wrapper .sub-navi {padding: .75em 0;}
+      .sub-wrapper .sub-navi:first-child {padding: 0 0 .75em 0;}
+      .sub-wrapper .sub-navi::after {display: inline-block; content: '＞'; color: #ae1a4a;}
+      .sub-wrapper .sub-prd {font-size: .8em; padding: .25em 0;}
+      .sub-wrapper .sub-prd a:hover {text-decoration: underline;}
+      .sub-wrapper .sub-prd > ul {padding: .5em 0;}
+      .sub-wrapper .sub-prd > ul > .prd {font-size: 1.05em; color: #121212; float: left;}
+      .sub-wrapper .sub-prd > ul > .prd::before {display: inline-block; content: '·'; padding: 0 .25em 0 .75em;}
+
+      /* 03/18 실습 */
+
+      /* 티비 */
+    .sub-wrap2 {float: left; width: 16.25%; height: 100%; padding: 0 1.25%; color: #333;}
+    .sub-wrapper .sub-wrap2.title {width: 25%;}
+    .sub-wrapper .sub-wrap2:not(:last-child) {border-right: 1px solid #bbb;}
+    .sub-navi.sp {margin: 3rem 0;}
+    .sub-navi.sp::after {content: none;}
+    .sub-navi.sp i {color: #ae1a4a;}
+
+      /* 모니터 */
+    .sub-prd.sp {margin-top: 1.5rem;}
+
+      /* 주방가전 */
+      .sub-wrap3 {float: left; width: 14%; height: 100%; padding: 0 1.25%; color: #333;}
+      .sub-wrapper .sub-wrap3.title {width: 25%;}
+      .sub-wrapper .sub-wrap3:not(:last-child) {border-right: 1px solid #bbb;}
+
+      /* 생활가전 */
+      .sub-wrap4 {float: left; width: 12.5%; height: 100%; padding: 0 1.25%; color: #333;}
+      .sub-wrapper .sub-wrap4.title {width: 25%;}
+      .sub-wrapper .sub-wrap4:not(:last-child) {border-right: 1px solid #bbb;}
 
 
+    /* 03/18 실습// */
 
 
 	.header-wrapper .navi-wrapper2 {background-color: #ae1a4a;}
+
+
+
+  /* 반응형 */
+  @media (min-width: 576px) {
+
+  }
+
+  @media (min-width: 768px) {
+
+  }
+  
+  @media (min-width: 992px) {
+
+  }
+  
+  @media (min-width: 1200px) {
+
+  }
+  
+  @media (min-width: 1400px) {
+    .navi-wrapper .navi-wrap {display: block;}
+    .navi-wrapper .mb-navi-wrap {display: none;}
+  }
+
+    @media (min-width: 1600px) {
+  
+    }
