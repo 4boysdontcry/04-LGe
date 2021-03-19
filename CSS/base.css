@@ -50,3 +50,4 @@ img {vertical-align: bottom;}
 .clearfix::after {display: block; content: ""; clear: both;}
 .img {width: 100%;}
 .imgx {max-width: 100%;}
+button {font-family: inherit;}
