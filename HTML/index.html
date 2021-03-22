@@ -4,10 +4,12 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>LG전자</title>
+	<link rel="shortcut icon" href="/lg_favicon.ico" />
+	<title>LG전자-self</title>
 	<link rel="stylesheet" href="../css/all.min.css">
 	<link rel="stylesheet" href="../css/base.css">
 	<link rel="stylesheet" href="../css/index.css">
+	<script src="../js/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 	<!-- .header-wrapper -->
@@ -214,7 +216,9 @@
 					<li class="navi"><span>|</span> <a href="#">B2B</a></li>
 				</ul>
 				<div class="mb-navi-wrap">
-					<i class="fa fa-bars"></i>
+					<a href="#"	class="fa fa-user"></a>
+					<a href="#"	class="fa fa-sign-in-alt"></a>
+					<a href="#" class="fa fa-bars"></a>
 				</div>
 			</div>
 		</nav>
@@ -245,13 +249,32 @@
 					<button class="bt-link angle-rt">자세히보기</button>
 				</div>
 			</div>
+			<div class="pager-wrapper">
+				<a href="#" class="pager active"></a>
+				<a href="#" class="pager"></a>
+				<a href="#" class="pager"></a>
+				<a href="#" class="pager"></a>
+				<a href="#" class="pager"></a>
+				<a href="#" class="pager"></a>
+				<a href="#" class="bt-play fa fa-play active"></a>
+				<a href="#" class="bt-pause fa fa-pause"></a>
+			</div>
 		</div>
 	</section>
 	<!-- .main-wrapper // -->
 
 	<!-- .link-wrapper -->
-	<section class="link-wrapper">
-
+	<section class="link-wrapper wrapper3">
+		<!-- ul.link-wrap>li*3>img.img -->
+		<ul class="link-wrap clearfix">
+			<li><img src="../IMG/link01.jpg" alt="링크이미지" class="img"></li>
+			<li><img src="../IMG/link02.jpg" alt="링크이미지" class="img"></li>
+			<li><img src="../IMG/link03.jpg" alt="링크이미지" class="img"></li>
+		</ul>
+		<ul class="link-wrap clearfix">
+			<li><img src="../IMG/link04.jpg" alt="링크이미지" class="img"></li>
+			<li><img src="../IMG/link05.jpg" alt="링크이미지" class="img"></li>
+		</ul>
 	</section>
 	<!-- .link-wrapper // -->
 
@@ -278,6 +301,8 @@
 
 	</footer>
 	<!-- .footer-wrapper // -->
+
+	<script src="../js/index.js"></script>
 </body>
 </html>
 
