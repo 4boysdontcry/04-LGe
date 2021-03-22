@@ -23,8 +23,8 @@ $(".best-wrapper .pager-wrapper a.pager").click(function(e){
 })
 
 var swiper = new Swiper('.swiper-container', {
-	slidesPerView: 4,
-	spaceBetween: 30,
+	slidesPerView: 1,
+	spaceBetween: 0,
 	loop: true,
 	navigation: {
 		nextEl: '.slide-wrapper .bt-next',
@@ -34,4 +34,21 @@ var swiper = new Swiper('.swiper-container', {
 		el: '.slide-wrapper .swiper-pagination',
 		clickable: true
 	},
+	breakpoints: {
+		768: {
+			slidesPerView: 2,
+			slidesPerGroup:2,
+			spaceBetween: 20,
+		},
+		1200: {
+			slidesPerView: 3,
+			slidesPerGroup:3,
+			spaceBetween: 20,
+		},
+		1400: {
+			slidesPerView: 4,
+			slidesPerGroup:4,
+			spaceBetween: 20,
+		},
+	}
 })

@@ -151,6 +151,21 @@ html, body {font-family: 'LGSmHaR'; font-size: 14px; letter-spacing: -1px; heigh
 .best-wrapper > .slide-wrapper > .slide-stage > .slide-wrap > .slide > div > .best-cont {color: #777;}
 
 
+/******************** evt-wrapper **********************/
+.evt-wrapper {text-align: center; background-color: rgb(236, 236, 236);}
+.evt-wrapper >.evt-wrap > .title-wrapper {padding: 3.5rem 0;}
+.evt-wrapper >.evt-wrap > .title-wrapper > .evt-title {font-size: 1.5rem;}
+.evt-wrapper >.evt-wrap > .title-wrapper > .evt-title > span {text-decoration: underline;}
+.evt-wrapper >.evt-wrap > .title-wrapper > .evt-sub-title {float: right; top: 0; right: 10%;}
+.evt-wrapper >.evt-wrap > .title-wrapper > .evt-sub-title a:hover {text-decoration: underline;}
+
+.evt-wrapper >.evt-wrap > .evt-content {background-color: white;}
+.evt-wrapper >.evt-wrap > .evt-content > .evt-img {float: left; width: 57.1%;}
+.evt-wrapper >.evt-wrap > .evt-content > .con-wrap {float: right; width: 30%; text-align: left; margin: 5rem 3rem 0 0;}
+.evt-wrapper >.evt-wrap > .evt-content > .con-wrap > .content > .con-1 {font-size: 1.5rem; margin-bottom: 2rem;}
+.evt-wrapper >.evt-wrap > .evt-content > .con-wrap > .content > .con-2 {font-size: 1.2rem; margin-bottom: 2rem;}
+.evt-wrapper >.evt-wrap > .evt-content > .con-wrap > .content > .con-3 {font-size: 1rem; margin-bottom: 2rem;}
+
 
 
 /******************** 반응형 **********************/
