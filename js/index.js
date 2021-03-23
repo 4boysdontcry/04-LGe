@@ -26,11 +26,11 @@ $(".best-wrapper .pager-wrapper a.pager").click(function(e){
 
 var swiperMain = new Swiper('.main-wrapper .swiper-container', {
 	navigation: {
-		nextEl: '.main-wrapper .slide-wrapper .bt-next',
-		prevEl: '.main-wrapper .slide-wrapper .bt-prev',
+		nextEl: '.main-wrapper .bt-next',
+		prevEl: '.main-wrapper .bt-prev',
 	},
 	pagination: {
-		el: '.main-wrapper .slide-wrapper .swiper-pagination',
+		el: '.main-wrapper .swiper-pagination',
 		clickable: true
 	}
 })
